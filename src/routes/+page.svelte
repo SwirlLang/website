@@ -14,6 +14,14 @@
 </main>
 
 <style lang="scss">
+    @keyframes dot-grid {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 40px 40px;
+        }
+    }
 	.dot-grid {
 		background-image: radial-gradient(white 1px, transparent 0);
 		background-size: 40px 40px;
@@ -26,6 +34,7 @@
         border-radius: 50%;
         mask: linear-gradient(transparent 0%, #000000c4 100%);
         z-index: -1;
+        animation: dot-grid 3s infinite linear;
 	}
 	div.circle {
 		width: 70rem;
