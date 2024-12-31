@@ -61,7 +61,7 @@
 		border-radius: 50%;
 		top: 100%;
 		left: 50%;
-		filter: blur(130px);
+		filter: blur(100px);
 		transform: translate(-50%, -50%);
 		animation: rotate_gradient 10s infinite linear;
 		z-index: -3;
