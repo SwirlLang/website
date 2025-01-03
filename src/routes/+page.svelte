@@ -11,7 +11,10 @@
 		</h2>
 	</div>
 	<p>A modern, beginner-friendly language that combines power, performance, and simplicity.</p>
-	<button><a href="https://github.com/swirllang/swirl" target="_blank">Download</a></button>
+	<div class="flex gap-4">
+		<button class="download"><a href="https://github.com/swirllang/swirl" target="_blank">Download</a></button>
+		<button class="docs"><a href="https://github.com/swirllang/swirl" target="_blank">Get started</a></button>
+	</div>
 </main>
 
 <style lang="scss">
@@ -90,10 +93,21 @@
 		width: 35%;
 	}
 	button {
-		background: radial-gradient(circle, rgba(49, 49, 49, 1) 0%, rgba(27, 27, 27, 1) 100%);
-		outline: 2px solid #646464;
-		padding: 0.2rem 1rem;
+		background-color: #e3c7c1;
+		padding: 0.3rem 1.2rem;
 		border-radius: 10rem;
 		margin-top: 2rem;
+		transition: 0.3s;
+		&.download {
+			outline: 3px solid #646464;
+			color: #1b1b1b;
+		}
+		&.docs {
+			outline: 3px solid #646464;
+			background-color: #1b1b1b;
+		}
+		&:hover {
+			outline: 3px solid #e3c7c1;
+		}
 	}
 </style>
