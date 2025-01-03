@@ -73,6 +73,7 @@
 		font-size: 6rem;
 		font-family: 'Bodoni Moda', serif;
 		line-height: 1.2;
+		font-optical-sizing: none;
 		span {
 			color: #fddbd5;
 			font-size: 8rem;
