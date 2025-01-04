@@ -23,6 +23,9 @@ header {
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	z-index: 3;
+	background: linear-gradient(90deg, #1b1b1b 0%, #1b1b1bb8 50%, #1b1b1b 100%);
+	backdrop-filter: blur(10px);
 	h1 {
 		font-size: 1.3rem;
 		font-weight: 700;

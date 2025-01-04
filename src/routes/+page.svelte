@@ -36,7 +36,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         border-radius: 50%;
-        mask: linear-gradient(transparent 0%, #000000c4 100%);
+        mask: linear-gradient(transparent 0%, #000000c4 50%, transparent 80%);
         z-index: -1;
         animation: dot-grid 3s infinite linear;
 	}
@@ -44,7 +44,7 @@
 		width: 80vw;
 		height: 80vw;
 		border-radius: 50%;
-		background: linear-gradient(to bottom, rgba(27, 27, 27, 1) 0%, rgba(18, 0, 138, 0.6) 100%);
+		background: linear-gradient(to bottom, rgba(27, 27, 27, 1) 0%, rgba(18, 0, 138, 0.6) 50%, rgba(27, 27, 27, 1) 80%);
 		position: absolute;
 		top: 100%;
 		left: 50%;
@@ -94,7 +94,7 @@
 		width: 35%;
 	}
 	button {
-		background-color: #e3c7c1;
+		background-color: #fddbd5;
 		padding: 0.3rem 1.2rem;
 		border-radius: 10rem;
 		margin-top: 2rem;
@@ -108,7 +108,7 @@
 			background-color: #1b1b1b;
 		}
 		&:hover {
-			outline: 3px solid #e3c7c1;
+			outline: 3px solid #fddbd5;
 		}
 	}
 </style>
