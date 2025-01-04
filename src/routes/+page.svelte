@@ -12,61 +12,94 @@
 	</div>
 	<p>A modern, beginner-friendly language that combines power, performance, and simplicity.</p>
 	<div class="flex gap-4">
-		<button class="download"><a href="https://github.com/swirllang/swirl" target="_blank">Download</a></button>
-		<button class="docs"><a href="https://github.com/swirllang/swirl" target="_blank">Get started</a></button>
+		<button class="download"
+			><a href="https://github.com/swirllang/swirl" target="_blank">Download</a></button
+		>
+		<button class="docs"
+			><a href="https://github.com/swirllang/swirl" target="_blank">Get started</a></button
+		>
 	</div>
 </main>
 
 <style lang="scss">
-    @keyframes dot-grid {
-        0% {
-            background-position: 0 0;
-        }
-        100% {
-            background-position: 40px 40px;
-        }
-    }
+	:root {
+		--gradient-angle: 45deg;
+		--clr-1: #12008a;
+		--clr-2: #7e0e7c;
+		--clr-3: #b442b2;
+	}
+	@keyframes dot-grid {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 40px 40px;
+		}
+	}
 	.dot-grid {
 		background-image: radial-gradient(white 1px, transparent 0);
 		background-size: 40px 40px;
-        width: 80vw;
-        height: 80vw;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        mask: linear-gradient(transparent 0%, #000000c4 50%, transparent 80%);
-        z-index: -1;
-        animation: dot-grid 3s infinite linear;
+		width: 80vw;
+		height: 80vw;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		mask: linear-gradient(transparent 0%, #000000c4 50%, transparent 80%);
+		z-index: -1;
+		animation: dot-grid 3s infinite linear;
+		// display: none;
 	}
 	.circle {
 		width: 80vw;
 		height: 80vw;
 		border-radius: 50%;
-		background: linear-gradient(to bottom, rgba(27, 27, 27, 1) 0%, rgba(18, 0, 138, 0.6) 50%, rgba(27, 27, 27, 1) 80%);
+		background: linear-gradient(
+			to bottom,
+			rgba(27, 27, 27, 1) 0%,
+			rgba(14, 0, 102, 0.8) 50%,
+			rgba(27, 27, 27, 1) 80%
+		);
 		position: absolute;
 		top: 100%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -2;
+		// display: none;
 	}
-	@keyframes rotate_gradient {
-		100% {
-			transform: translate(-50%, -50%) rotate(360deg)
+
+	@property --gradient-angle {
+		syntax: '<angle>';
+		initial-value: 85deg;
+		inherits: false;
+	}
+	@keyframes rotate {
+		from {
+			--gradient-angle: 0deg;
+		}
+		to {
+			--gradient-angle: 360deg;
 		}
 	}
 	.gradient-bg {
-		width: 70vw;
-		height: 70vw;
-		background: linear-gradient(45deg, #442576, #12008a 27% 45%, #7e0e7c 72%, #b442b2 92%);
+		width: 65vw;
+		height: 60vw;
+		background: conic-gradient(
+			from var(--gradient-angle),
+			var(--clr-1) 10%,
+			var(--clr-2),
+			var(--clr-3),
+			var(--clr-2),
+			var(--clr-1) 90%
+		);
 		position: absolute;
 		border-radius: 50%;
-		top: 100%;
+		top: 85%;
 		left: 50%;
 		filter: blur(100px);
 		transform: translate(-50%, -50%);
-		animation: rotate_gradient 10s infinite linear;
+		animation: rotate 10s infinite linear;
 		z-index: -3;
 	}
 	h2 {
@@ -100,15 +133,15 @@
 		margin-top: 2rem;
 		transition: 0.3s;
 		&.download {
-			outline: 3px solid #646464;
+			border: 3px solid #646464;
 			color: #1b1b1b;
 		}
 		&.docs {
-			outline: 3px solid #646464;
+			border: 3px solid #646464;
 			background-color: #1b1b1b;
 		}
 		&:hover {
-			outline: 3px solid #fddbd5;
+			border: 3px solid #fddbd5;
 		}
 	}
 </style>
