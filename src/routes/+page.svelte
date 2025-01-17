@@ -12,12 +12,8 @@
 	</div>
 	<p>A modern, beginner-friendly language that combines power, performance, and simplicity.</p>
 	<div class="flex gap-4">
-		<button class="download"
-			><a href="https://github.com/swirllang/swirl" target="_blank">Download</a></button
-		>
-		<button class="docs"
-			><a href="https://github.com/swirllang/swirl" target="_blank">Get started</a></button
-		>
+		<a href="/download" class="btn download">Download</a>
+		<a href="https://github.com/swirllang/swirl" target="_blank" class="btn docs">Get started</a>
 	</div>
 </main>
 
@@ -49,7 +45,6 @@
 		mask: linear-gradient(transparent 0%, #000000c4 50%, transparent 80%);
 		z-index: -1;
 		animation: dot-grid 3s infinite linear;
-		// display: none;
 	}
 	.circle {
 		width: 80vw;
@@ -58,7 +53,9 @@
 		background: linear-gradient(
 			to bottom,
 			rgba(27, 27, 27, 1) 0%,
-			rgba(14, 0, 102, 0.8) 50%,
+			rgb(14, 0, 85) 35%,
+			rgba(14, 0, 102, 1) 50%,
+			rgb(14, 0, 85) 60%,
 			rgba(27, 27, 27, 1) 80%
 		);
 		position: absolute;
@@ -66,7 +63,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -2;
-		// display: none;
 	}
 
 	@property --gradient-angle {
@@ -126,7 +122,7 @@
 		text-align: center;
 		width: 35%;
 	}
-	button {
+	.btn {
 		background-color: #fddbd5;
 		padding: 0.3rem 1.2rem;
 		border-radius: 10rem;
@@ -135,13 +131,19 @@
 		&.download {
 			border: 3px solid #646464;
 			color: #1b1b1b;
+			&:hover {
+				background-color: #cab0ac;
+			}
 		}
 		&.docs {
 			border: 3px solid #646464;
 			background-color: #1b1b1b;
+			&:hover {
+				background-color: #2b2b2b;
+			}
 		}
 		&:hover {
-			border: 3px solid #fddbd5;
+			// background-color: ;
 		}
 	}
 </style>
