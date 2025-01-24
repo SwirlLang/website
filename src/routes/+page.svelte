@@ -142,8 +142,5 @@
 				background-color: #2b2b2b;
 			}
 		}
-		&:hover {
-			// background-color: ;
-		}
 	}
 </style>
