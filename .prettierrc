@@ -11,5 +11,6 @@
 				"parser": "svelte"
 			}
 		}
-	]
+	],
+	"svelteBracketNewLine": false
 }
