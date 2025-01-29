@@ -37,7 +37,7 @@
 		src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
 		alt="swirl logo"
 		class="h-8 w-8 rounded-xl" />
-	<p>© 2025 Swirl</p>
+	<p>© Swirl Lang</p>
 </footer>
 
 <style lang="scss">
