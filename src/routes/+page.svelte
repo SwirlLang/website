@@ -104,7 +104,7 @@
 		line-height: 1.2;
 		font-optical-sizing: none;
 		span {
-			color: #fddbd5;
+			color: #d8a4ff;
 			font-size: 8rem;
 			font-style: italic;
 			font-weight: 700;
@@ -123,7 +123,7 @@
 		width: 35%;
 	}
 	.btn {
-		background-color: #fddbd5;
+		background-color: #d8a4ff;
 		padding: 0.3rem 1.2rem;
 		border-radius: 10rem;
 		margin-top: 2rem;
@@ -132,7 +132,7 @@
 			border: 3px solid #646464;
 			color: #1b1b1b;
 			&:hover {
-				background-color: #cab0ac;
+				background-color: #e7c6ff;
 			}
 		}
 		&.docs {

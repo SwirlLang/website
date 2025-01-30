@@ -13,7 +13,7 @@
 		<span class="text-5xl/[1.7] font-bold">v</span>
 		<span class="text-[10rem] font-bold leading-none">{data.version}</span>
 		{#if data.build}
-			<span class="build mt-5 self-start rounded-md bg-[#fddbd5] px-2 text-black"
+			<span class="build mt-5 self-start rounded-md bg-[#d8a4ff] px-2 text-black"
 				>{data.build}</span>
 		{/if}
 	</div>
