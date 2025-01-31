@@ -8,9 +8,15 @@ let downloads = {
 };
 
 export const load: PageLoad = async ({ params, fetch }) => {
-	let version = /^(\d.\d.\d)(-(alpha|beta))?$/.exec(params.version);	
+	let version = /^(\d.\d.\d)(-(alpha|beta))?$/.exec(params.version) || [];	
 
-	if(!version) error(400, 'Invalid version');
+	if(params.version === 'latest') {
+		version[0] = '0.0.5-alpha';
+		version[1] = '0.0.5';
+		version[2] = '-Alpha';	
+	}
+
+	else if(!version) error(400, 'Invalid version');
 	
 	try {
 		const res = await fetch(`https://api.github.com/repos/swirllang/swirl/releases/tags/v${version[0]}`, {
@@ -34,6 +40,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 				downloads.linux[1].url = asset.browser_download_url;
 			}
 		});
+		console.log(downloads)
 		return {
 			version: version[1],
 			build: version[2].substring(1),

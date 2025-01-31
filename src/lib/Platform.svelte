@@ -12,7 +12,7 @@
 			{#each downloads as item}
 				<a
 					href={item.url}
-					class="flex h-7 w-full items-center justify-center rounded-md bg-[#d8a4ff] text-sm font-medium text-black shadow-md"
+					class="flex h-7 w-full items-center justify-center rounded-md bg-[#d8a4ff] hover:bg-[#e7c6ff] text-sm font-medium text-black shadow-md"
 					>{item.format}</a>
 			{/each}
 		</div>
