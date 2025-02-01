@@ -40,7 +40,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 				downloads.linux[1].url = asset.browser_download_url;
 			}
 		});
-		console.log(downloads)
+		
 		return {
 			version: version[1],
 			build: version[2].substring(1),

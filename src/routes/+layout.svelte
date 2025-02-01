@@ -30,7 +30,7 @@
 
 <style lang="scss">
 	header {
-		width: 100%;
+		width: 100vw;
 		position: fixed;
 		margin-inline: auto;
 		padding: 0 1rem;
