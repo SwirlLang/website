@@ -9,7 +9,7 @@
 		alt="swirl logo"
 		class="h-8 w-8 rounded-xl"
 	/>
-	<a href="/">
+	<a href="/" class="hover:text-[#e7c6ff]">
 		<h1>Swirl</h1>
 	</a>
 
