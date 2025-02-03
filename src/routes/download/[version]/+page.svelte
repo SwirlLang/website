@@ -4,7 +4,6 @@
 	import Platform from '$lib/Platform.svelte';
 
 	let { data }: PageProps = $props();
-	// console.log(data.downloads);
 </script>
 
 <main class="mt-16 flex flex-col">
