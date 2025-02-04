@@ -17,12 +17,12 @@
 </script>
 
 <header class="flex">
-	<img
-		src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
-		alt="swirl logo"
-		class="h-8 w-8 rounded-xl" />
 	<nav>
-		<a href="/" class:current={page.url.pathname === '/'} class="swirl">
+		<a href="/" class:current={page.url.pathname === '/'} class="swirl relative">
+			<img
+				src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
+				alt="swirl logo"
+				class="h-8 w-8 rounded-xl absolute -left-12 top-1/2 -translate-y-1/2" />
 			<h1>Swirl</h1>
 		</a>
 		<a href="/download/latest" class:current={page.url.pathname.startsWith('/download')}>

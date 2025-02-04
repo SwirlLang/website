@@ -6,7 +6,7 @@
 	let { data }: PageProps = $props();
 </script>
 
-<main class="mt-16 flex flex-col">
+<main class="mt-20 flex flex-col">
 	<h1 class="font-medium text-[#bbbbbb]">Download Swirl</h1>
 	<div class="version mt-4 flex items-end gap-4">
 		<span class="text-5xl/[1.7] font-bold">v</span>
