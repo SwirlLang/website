@@ -17,7 +17,7 @@
 </script>
 
 <header class="flex">
-	<nav>
+	<nav class="items-baseline">
 		<a href="/" class:current={page.url.pathname === '/'} class="swirl relative">
 			<img
 				src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
