@@ -19,3 +19,7 @@ body {
 ::view-transition-new(root) {
 	animation-duration: 0.1s;
 }
+
+@view-transition {
+	navigation: auto;
+  }

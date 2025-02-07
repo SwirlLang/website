@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
+	import 'iconify-icon';
 	import '../app.scss';
+
 	let { children } = $props();
 
 	onNavigate((navigation) => {
@@ -16,22 +18,33 @@
 	});
 </script>
 
-<header class="flex">
-	<nav class="items-baseline">
-		<a href="/" class:current={page.url.pathname === '/'} class="swirl relative">
-			<img
-				src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
-				alt="swirl logo"
-				class="h-8 w-8 rounded-xl absolute -left-12 top-1/2 -translate-y-1/2" />
-			<h1>Swirl</h1>
-		</a>
-		<a href="/download/latest" class:current={page.url.pathname.startsWith('/download')}>
-			Download
-		</a>
-		<a href="/docs" class:current={page.url.pathname.startsWith('/docs')}> Docs </a>
+<header>
+	<nav class="flex justify-between">
+		<div>
+			<a href="/" class="swirl flex items-center gap-2">
+				<img
+					src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
+					alt="swirl logo"
+					class="h-8 w-8 rounded-xl" />
+				Swirl
+			</a>
+		</div>
+		<div class="flex gap-4">
+			<a href="/download/latest" class:current={page.url.pathname.startsWith('/download')}
+				>Download</a>
+			<a href="/docs" class:current={page.url.pathname.startsWith('/docs')}>Docs</a>
+			<a href="/blog" class:current={page.url.pathname.startsWith('/blog')}>Blog</a>
+		</div>
+		<div>
+			<a href="https://github.com/swirllang/swirl" aria-label="GitHub" class="flex" target="_blank">
+				<iconify-icon icon="uil:github" width="24" height="24"></iconify-icon>
+			</a>
+		</div>
 	</nav>
 </header>
+
 {@render children()}
+
 <footer class="flex h-14">
 	<img
 		src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
@@ -44,53 +57,51 @@
 	header {
 		width: 100vw;
 		position: fixed;
-		margin-inline: auto;
-		padding: 0 1rem;
-		top: 0px;
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
+		padding-inline: 1rem;
 		z-index: 3;
 		background: linear-gradient(90deg, #1b1b1b 0%, #272727c9 50%, #1b1b1b 100%);
-		backdrop-filter: blur(10px);
+		backdrop-filter: blur(7px);
+		top: 0;
 		nav {
-			display: flex;
-			gap: 0.75rem;
-			a {
-				&:hover {
-					color: #bdbdbd;
+			div {
+				a {
+					color: white;
+					font-weight: 500;
+					padding: .7rem 0;
+					position: relative;
+					display: flex;
+					align-items: center;
+					font-size: 1.1rem;
 					&.swirl {
-						color: #e7c6ff;
+						font-weight: 700;
+						font-size: 1.25rem;
+					}
+					&:hover {
+						color: #bdbdbd;
+						&.swirl {
+							color: #e7c6ff;
+							& img {
+								opacity: 0.9;
+							}
+						}
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 13px;
+						background: #e7c6ff;
+						clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+					}
+
+					&.current::after {
+						view-transition-name: indicator;
+						height: 8px;
 					}
 				}
-				&.swirl {
-					padding-inline: 0;
-				}
-				position: relative;
-				padding: 1rem 1rem;
-				color: #fff;
-				text-decoration: none;
-
-				&::after {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 50%;
-					transform: translateX(-50%);
-					width: 13px;
-					background: #e7c6ff;
-					clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-				}
-
-				&.current::after {
-					view-transition-name: indicator;
-					height: 8px;
-				}
 			}
-		}
-		h1 {
-			font-size: 1.2rem;
-			font-weight: 700;
 		}
 	}
 	footer {
