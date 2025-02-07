@@ -20,6 +20,25 @@ body {
 	animation-duration: 0.1s;
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 0.5em;
+	height: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #555;
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #707070;
+}
+
 @view-transition {
 	navigation: auto;
   }
