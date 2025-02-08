@@ -35,7 +35,7 @@
 			<a href="/docs" class:current={page.url.pathname.startsWith('/docs')}>Docs</a>
 			<a href="/blog" class:current={page.url.pathname.startsWith('/blog')}>Blog</a>
 		</div>
-		<div>
+		<div class="ps-16">
 			<a href="https://github.com/swirllang/swirl" aria-label="GitHub" class="flex" target="_blank">
 				<iconify-icon icon="uil:github" width="24" height="24"></iconify-icon>
 			</a>
