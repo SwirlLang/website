@@ -1,6 +1,4 @@
 <main class="flex h-screen flex-col items-center justify-center">
-	<div class="dot-grid"></div>
-	<div class="circle"></div>
 	<div class="gradient-bg"></div>
 	<div class="flex flex-col items-center justify-center">
 		<h2 class="better">
@@ -23,46 +21,6 @@
 		--clr-1: #12008a;
 		--clr-2: #7e0e7c;
 		--clr-3: #b442b2;
-	}
-	@keyframes dot-grid {
-		0% {
-			background-position: 0 0;
-		}
-		100% {
-			background-position: 40px 40px;
-		}
-	}
-	.dot-grid {
-		background-image: radial-gradient(white 1px, transparent 0);
-		background-size: 40px 40px;
-		width: 80vw;
-		height: 80vw;
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		border-radius: 50%;
-		mask: linear-gradient(transparent 0%, #000000c4 50%, transparent 80%);
-		z-index: -1;
-		animation: dot-grid 3s infinite linear;
-	}
-	.circle {
-		width: 80vw;
-		height: 80vw;
-		border-radius: 50%;
-		background: linear-gradient(
-			to bottom,
-			rgba(27, 27, 27, 1) 0%,
-			rgb(14, 0, 85) 35%,
-			rgba(14, 0, 102, 1) 50%,
-			rgb(14, 0, 85) 60%,
-			rgba(27, 27, 27, 1) 80%
-		);
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: -2;
 	}
 
 	@property --gradient-angle {
@@ -91,36 +49,57 @@
 		);
 		position: absolute;
 		border-radius: 50%;
-		top: 85%;
+		top: 55%;
 		left: 50%;
+		opacity: 35%;
 		filter: blur(100px);
 		transform: translate(-50%, -50%);
 		animation: rotate 10s infinite linear;
 		z-index: -3;
+		@media screen and (width < 55rem) {
+			width: 70vw;
+			height: 75vw;
+			opacity: 65%;
+		}
+
+		@media screen and (width < 30rem) {
+			width: 90vw;
+			height: 120vw;
+			opacity: 70%;
+		}
 	}
 	h2 {
-		font-size: 6rem;
+		font-size: clamp(3rem, 10vw, 6rem);
 		font-family: 'Bodoni Moda', serif;
 		line-height: 1.2;
 		font-optical-sizing: none;
+		width: min-content;
+		text-align: center;
 		span {
 			color: #d8a4ff;
-			font-size: 8rem;
+			font-size: clamp(5rem, 10vw, 8rem);
 			font-style: italic;
 			font-weight: 700;
 		}
-		&.better {
-			transform: translateX(-20%);
-		}
-		&.faster {
-			transform: translateX(20%);
+		@media screen and (width > 768px) {
+			width: 100%;
+			&.better {
+				transform: translateX(-20%);
+			}
+			&.faster {
+				transform: translateX(20%);
+			}
 		}
 	}
 	p {
 		font-size: 1.5rem;
+		font-size: clamp(1.1rem, 3vw, 1.5rem);
 		margin-top: 2rem;
 		text-align: center;
 		width: 35%;
+		@media screen and (width < 768px) {
+			width: 70%;
+		}
 	}
 	.btn {
 		background-color: #d8a4ff;
