@@ -49,23 +49,24 @@
 		<a href="/blog" class:current={page.url.pathname.startsWith('/blog')}>Blog</a>
 	</nav>
 	<button
-			class="dropdown"
-			aria-label="navbar dropdown button"
-			onclick={toggleNavbar}
-			bind:this={dropdownBtn}>
-			<iconify-icon icon="tabler:chevron-compact-down" width="24" height="24" class=""
-			></iconify-icon>
-		</button>
+		class="dropdown"
+		aria-label="navbar dropdown button"
+		onclick={toggleNavbar}
+		bind:this={dropdownBtn}>
+		<iconify-icon icon="tabler:chevron-compact-down" width="24" height="24" class=""></iconify-icon>
+	</button>
 </header>
 
 {@render children()}
 
 <footer class="flex h-14">
-	<img
-		src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
-		alt="swirl logo"
-		class="h-8 w-8 rounded-xl" />
-	<p>© Swirl Lang</p>
+	<a href="https://github.com/SwirlLang" class="flex items-center gap-2 hover:text-gray-300">
+		<img
+			src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
+			alt="swirl logo"
+			class="h-8 w-8 rounded-xl" />
+		<p>© Swirl Lang</p>
+	</a>
 </footer>
 
 <style lang="scss">
@@ -123,42 +124,42 @@
 			height: 3.5rem;
 		}
 		a {
-				color: white;
-				font-weight: 500;
-				height: 100%;
-				position: relative;
-				display: flex;
-				align-items: center;
-				font-size: 1.1rem;
+			color: white;
+			font-weight: 500;
+			height: 100%;
+			position: relative;
+			display: flex;
+			align-items: center;
+			font-size: 1.1rem;
+			&.swirl {
+				font-weight: 700;
+				font-size: 1.25rem;
+			}
+			&:hover {
+				color: #bdbdbd;
 				&.swirl {
-					font-weight: 700;
-					font-size: 1.25rem;
-				}
-				&:hover {
-					color: #bdbdbd;
-					&.swirl {
-						color: #e7c6ff;
-						& img {
-							opacity: 0.9;
-						}
+					color: #e7c6ff;
+					& img {
+						opacity: 0.9;
 					}
 				}
-				&::after {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 50%;
-					transform: translateX(-50%);
-					width: 13px;
-					background: #e7c6ff;
-					clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-				}
-
-				&.current::after {
-					view-transition-name: indicator;
-					height: 8px;
-				}
 			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 13px;
+				background: #e7c6ff;
+				clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+			}
+
+			&.current::after {
+				view-transition-name: indicator;
+				height: 8px;
+			}
+		}
 	}
 	footer {
 		justify-content: center;
