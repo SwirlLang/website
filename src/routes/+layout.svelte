@@ -59,7 +59,7 @@
 
 {@render children()}
 
-<footer class="flex h-14">
+<footer class="flex h-24">
 	<a href="https://github.com/SwirlLang" class="flex items-center gap-2 hover:text-gray-300">
 		<img
 			src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
@@ -73,6 +73,7 @@
 	header {
 		position: fixed;
 		top: 0;
+		z-index: 1;
 		.navbar {
 			position: absolute;
 			left: 50%;
