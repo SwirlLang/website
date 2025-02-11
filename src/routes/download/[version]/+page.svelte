@@ -33,7 +33,7 @@
 				font-size: clamp(2.5rem, 10vw, 3rem);
 			}
 			& > :nth-child(2){
-				font-size: clamp(5.5rem, 10vw, 10rem);
+				font-size: clamp(5.5rem, 15vw, 10rem);
 			}
 			& > :nth-child(3){
 				font-size: clamp(0.5rem, 10vw, 1rem);
