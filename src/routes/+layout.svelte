@@ -95,8 +95,11 @@
 				0.3s transform,
 				0.5s opacity;
 			&:global(.open) {
-				transform: translate(-50%, 100%);
-				opacity: 100%;
+				@media screen and (width < 40rem) {
+					
+					transform: translate(-50%, 100%);
+					opacity: 100%;
+				}
 			}
 		}
 		.dropdown {
