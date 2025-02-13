@@ -45,8 +45,8 @@
 	<nav class="navbar flex items-center gap-4" bind:this={navbar}>
 		<a href="/download/latest" class:current={page.url.pathname.startsWith('/download')}
 			>Download</a>
-		<a href="/docs" class:current={page.url.pathname.startsWith('/docs')}>Docs</a>
-		<a href="/blog" class:current={page.url.pathname.startsWith('/blog')}>Blog</a>
+		<a href="https://swirl-docs.netlify.app/docs" class:current={page.url.pathname.startsWith('/docs')}>Docs</a>
+		<a href="https://swirl-docs.netlify.app/blog" class:current={page.url.pathname.startsWith('/blog')}>Blog</a>
 	</nav>
 	<button
 		class="dropdown"
