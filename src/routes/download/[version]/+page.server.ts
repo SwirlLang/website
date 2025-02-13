@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
+import { GITHUB_PAT } from '$env/static/private';
 
 let downloads = {
 	windows: [{ format: 'exe', url: '' }],
@@ -10,7 +11,7 @@ let downloads = {
 	macos: [{ format: 'dmg', url: '' }]
 };
 
-export const load: PageLoad = async ({ params, fetch }) => {
+export const load: PageServerLoad = async ({ params, fetch }) => {
 	let version = /^(\d.\d.\d)(-(alpha|beta))?$/.exec(params.version) || [];
 
 	if (params.version === 'latest') {
@@ -24,7 +25,7 @@ export const load: PageLoad = async ({ params, fetch }) => {
 			`https://api.github.com/repos/swirllang/swirl/releases/tags/v${version[0]}`,
 			{
 				headers: {
-					Authorization: `token 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`
+					Authorization: `token ${GITHUB_PAT}`
 				}
 			}
 		);
