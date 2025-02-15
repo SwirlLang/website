@@ -59,7 +59,7 @@
 
 {@render children()}
 
-<footer class="flex h-24">
+<footer class="flex h-28 flex-col">
 	<a href="https://github.com/SwirlLang" class="flex items-center gap-2 hover:text-gray-300">
 		<img
 			src="https://raw.githubusercontent.com/SwirlLang/branding/main/logos/logo.png"
@@ -67,6 +67,7 @@
 			class="h-8 w-8 rounded-xl" />
 		<p>© Swirl Lang</p>
 	</a>
+	<a href="https://www.netlify.com" class="mt-2"> <img src="https://www.netlify.com/v3/img/components/netlify-dark.svg" alt="Deploys by Netlify" width="90"/> </a>
 </footer>
 
 <style lang="scss">
