@@ -1,3 +1,5 @@
+![netlify logo](https://www.netlify.com/v3/img/components/netlify-dark.svg)
+
 # Swirl Website
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
