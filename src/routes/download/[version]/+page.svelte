@@ -16,7 +16,7 @@
 				>{data.build}</span>
 		{/if}
 	</div>
-	<div class="platforms mt-8 flex sm:h-96 w-full flex-wrap justify-evenly gap-10 px-8">
+	<div class="platforms mt-8 flex min-h-96 w-full flex-wrap justify-evenly gap-10 px-8">
 		<Platform platform="Windows" icon="uil:microsoft" downloads={data.downloads?.windows}/>
 		<Platform platform="Linux" icon="uil:linux" downloads={data.downloads?.linux} />
 		<Platform platform="MacOS" icon="uil:apple" downloads={data.downloads?.macos} />
