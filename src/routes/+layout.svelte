@@ -25,6 +25,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Swirl Lang</title>
+</svelte:head>
+
 <header>
 	<div class="nav-extra flex justify-between">
 		<div>
