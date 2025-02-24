@@ -1,0 +1,5 @@
+/blog/* https://swirl-docs.netlify.app/blog/:splat 200
+
+/docs/* https://swirl-docs.netlify.app/docs/:splat 200
+
+/assets/* https://swirl-docs.netlify.app/assets/:splat 200
