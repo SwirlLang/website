@@ -91,7 +91,6 @@
 			height: 3.5rem;
 			top: 0;
 			backdrop-filter: blur(7px);
-			view-transition-name: navbar;
 			transition:
 				0.3s transform,
 				0.5s opacity;
@@ -178,5 +177,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
+		view-transition-name: footer;
 	}
 </style>
