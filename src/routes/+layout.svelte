@@ -71,7 +71,12 @@
 			class="h-8 w-8 rounded-xl" />
 		<p>© Swirl Lang</p>
 	</a>
-	<a href="https://www.netlify.com" class="mt-2"> <img src="https://www.netlify.com/v3/img/components/netlify-dark.svg" alt="Deploys by Netlify" width="90"/> </a>
+	<a href="https://www.netlify.com" class="mt-2">
+		<img
+			src="https://www.netlify.com/v3/img/components/netlify-dark.svg"
+			alt="Deploys by Netlify"
+			width="90" />
+	</a>
 </footer>
 
 <style lang="scss">
@@ -87,6 +92,9 @@
 			top: 0;
 			backdrop-filter: blur(7px);
 			view-transition-name: navbar;
+			transition:
+				0.3s transform,
+				0.5s opacity;
 			@media screen and (width < 40rem) {
 				top: 0%;
 				background-color: #4f4f4fc9;
@@ -96,12 +104,8 @@
 				z-index: -1;
 				opacity: 0%;
 			}
-			transition:
-				0.3s transform,
-				0.5s opacity;
 			&:global(.open) {
 				@media screen and (width < 40rem) {
-					
 					transform: translate(-50%, 100%);
 					opacity: 100%;
 				}
