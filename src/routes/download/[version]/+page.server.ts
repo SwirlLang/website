@@ -32,17 +32,17 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 		const data = await res.json();
 
 		data.assets.forEach((asset: any) => {
-			if (asset.name.includes('Darwin')) {
-				downloads.macos[0].url = asset.browser_download_url;
-			}
-			if (asset.name.includes('win64')) {
-				downloads.windows[0].url = asset.browser_download_url;
-			}
 			if (asset.name.includes('deb')) {
 				downloads.linux[0].url = asset.browser_download_url;
 			}
-			if (asset.name.includes('rpm')) {
+			else if (asset.name.includes('rpm')) {
 				downloads.linux[1].url = asset.browser_download_url;
+			}
+			else if (asset.name.includes('win64')) {
+				downloads.windows[0].url = asset.browser_download_url;
+			}
+			else if (asset.name.includes('Darwin')) {
+				downloads.macos[0].url = asset.browser_download_url;
 			}
 		});
 
