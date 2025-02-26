@@ -40,9 +40,12 @@
 				Swirl
 			</a>
 		</div>
-		<div class="">
+		<div class="flex gap-3">
 			<a href="https://github.com/swirllang/swirl" aria-label="GitHub" class="flex" target="_blank">
 				<iconify-icon icon="uil:github" width="24" height="24"></iconify-icon>
+			</a>
+			<a href="https://discord.gg/RSJ5TUDdqx" aria-label="Discord" class="flex" target="_blank">
+				<iconify-icon icon="ic:baseline-discord" width="24" height="24"></iconify-icon>
 			</a>
 		</div>
 	</div>
