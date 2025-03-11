@@ -1,6 +1,5 @@
-![netlify logo](https://www.netlify.com/v3/img/components/netlify-dark.svg)
-
 # Swirl Website
+![netlify logo](https://www.netlify.com/v3/img/components/netlify-dark.svg)
 
 ## Developing
 
