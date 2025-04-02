@@ -98,7 +98,6 @@
 				0.3s transform,
 				0.5s opacity;
 			@media screen and (width < 40rem) {
-				top: 0%;
 				background-color: #4f4f4fb1;
 				padding: 0 1.5rem;
 				border-radius: 0 0 1rem 1rem;
