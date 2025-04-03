@@ -134,7 +134,7 @@
 			width: 100vw;
 			background: linear-gradient(90deg, #1b1b1b 0%, #272727c9 50%, #1b1b1b 100%);
 			backdrop-filter: blur(7px);
-			padding-inline: 1rem;
+			padding-inline: 1.5rem;
 			height: 3.5rem;
 		}
 		a {
