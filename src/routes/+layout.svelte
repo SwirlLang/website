@@ -179,6 +179,7 @@
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
+		font-weight: 500;
 		view-transition-name: footer;
 	}
 </style>
