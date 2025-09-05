@@ -11,7 +11,7 @@
 	<p>A modern, beginner-friendly language that combines power, performance, and simplicity.</p>
 	<div class="flex gap-4">
 		<a href="/download" class="btn download">Download</a>
-		<a href="https://github.com/swirllang/swirl" target="_blank" class="btn docs">Get started</a>
+		<a href="/docs/installation" target="_blank" class="btn docs">Get started</a>
 	</div>
 </main>
 
