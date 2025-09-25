@@ -18,11 +18,11 @@
     </div>
     <div class="platforms mt-12 min-h-96 w-full">
         <div class="flex flex-wrap justify-evenly gap-10 px-8">
-            <Platform platform="Windows" icon="uil:microsoft" downloads={data.downloads?.windows} />
-            <Platform platform="Linux" icon="uil:linux" downloads={data.downloads?.linux} />
-            <Platform platform="MacOS" icon="uil:apple" downloads={data.downloads?.macos} />
+            <Platform platform="Windows" icon="uil:microsoft" info="x86, 64bit. Windows 10/11" downloads={data.downloads?.windows} />
+            <Platform platform="Linux" icon="uil:linux" info="x86, 64bit. Debian, Fedora" downloads={data.downloads?.linux} />
+            <Platform platform="MacOS" icon="uil:apple" info="x86, 64bit. macOS 10.15+" downloads={data.downloads?.macos} />
         </div>
-        <p class="mt-12 text-center text-lg text-[#bbbbbb]">
+        <p class="mt-12 mb-8 text-center text-lg text-[#bbbbbb]">
             Need help? Check out the <a href="/docs/installation" class="text-[#d8a4ff] hover:underline"
                 >installation instructions.</a
             >

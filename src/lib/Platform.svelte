@@ -1,21 +1,24 @@
 <script lang="ts">
-	let { platform = 'Platform', icon = 'lucide:computer', downloads } = $props();
+	import DownloadBtn from '$lib/DownloadBtn.svelte';
+	let { platform = 'Platform', icon = 'lucide:computer', info , downloads } = $props();
 </script>
 
-<div class="{platform} flex min-w-36 flex-col">
-	<iconify-icon {icon} width="96" height="96" style="color: #d6d6d6;"></iconify-icon>
-	<span
-		class="translate-y-1/2 rounded-3xl border border-[#646464] bg-[#1b1b1b] px-8 py-2 text-center font-bold shadow-md"
-		>{platform}</span>
-	<div
-		class="flex h-32 flex-col justify-end rounded-xl border-[1px] border-[#646464] bg-[#313131] shadow-2xl">
-		<div class="flex h-20 w-full flex-col items-center justify-center gap-2 px-5">
-			{#each downloads as item}
-				<a
-					href={item.url}
-					class="flex h-7 w-full items-center justify-center rounded-md bg-[#d8a4ff] text-sm font-medium text-black shadow-md hover:bg-[#e7c6ff]"
-					>{item.format}</a>
-			{/each}
-		</div>
+<div
+	class="{platform} card flex min-h-80 min-w-64 flex-col justify-center rounded-3xl border border-[#b496ff4d] bg-[#d8a4ff1A] text-center shadow-lg">
+	<iconify-icon {icon} width="106" height="106"></iconify-icon>
+	<h3 class="mt-4 text-4xl font-bold">{platform}</h3>
+	<span class="text-xs text-slate-300 mt-2">{info}</span>
+	<div class="mt-8 flex flex-col items-center">
+		<DownloadBtn {downloads} />
 	</div>
 </div>
+
+<style lang="scss">
+	.card {
+		backdrop-filter: blur(10px);
+		box-shadow:
+			0 10px 30px rgba(0, 0, 0, 0.35),
+			inset 1px 1px 0 rgba(255, 255, 255, 0.1),
+			inset 0 0 50px rgba(151, 37, 147, 0.1);
+	}
+</style>
