@@ -34,14 +34,11 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 		data.assets.forEach((asset: any) => {
 			if (asset.name.includes('deb')) {
 				downloads.linux[0].url = asset.browser_download_url;
-			}
-			else if (asset.name.includes('rpm')) {
+			} else if (asset.name.includes('rpm')) {
 				downloads.linux[1].url = asset.browser_download_url;
-			}
-			else if (asset.name.includes('win64')) {
+			} else if (asset.name.includes('win64')) {
 				downloads.windows[0].url = asset.browser_download_url;
-			}
-			else if (asset.name.includes('Darwin')) {
+			} else if (asset.name.includes('Darwin')) {
 				downloads.macos[0].url = asset.browser_download_url;
 			}
 		});
@@ -49,7 +46,8 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 		return {
 			version: version[1],
 			build: version[2].substring(1),
-			downloads
+			downloads,
+			releaseNotes: data.html_url
 		};
 	} catch (err) {
 		console.error(err);
