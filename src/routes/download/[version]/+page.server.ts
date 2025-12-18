@@ -15,8 +15,8 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 	let version = /^(\d.\d.\d)(-(alpha|beta))?$/.exec(params.version) || [];
 
 	if (params.version === 'latest') {
-		version[0] = '0.0.5-alpha';
-		version[1] = '0.0.5';
+		version[0] = '0.0.6-alpha';
+		version[1] = '0.0.6';
 		version[2] = '-Alpha';
 	} else if (!version) error(400, 'Invalid version');
 
@@ -38,8 +38,6 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 				downloads.linux[1].url = asset.browser_download_url;
 			} else if (asset.name.includes('win64')) {
 				downloads.windows[0].url = asset.browser_download_url;
-			} else if (asset.name.includes('Darwin')) {
-				downloads.macos[0].url = asset.browser_download_url;
 			}
 		});
 

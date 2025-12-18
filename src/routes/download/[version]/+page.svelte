@@ -6,7 +6,7 @@
 	let { data }: PageProps = $props();
 </script>
 
-<main class="mt-24 flex flex-col max-sm:mb-8">
+<main class="mt-24 flex flex-col px-4 max-sm:mb-8">
 	<h1 class="text-2xl font-medium text-[#bbbbbb] md:text-3xl">Download Swirl</h1>
 	<div class="version mt-4 flex flex-wrap items-end justify-center gap-4 px-4">
 		<span class="text-5xl/[1.7] font-bold">v</span>
@@ -22,8 +22,8 @@
 				></a>
 		</div>
 	</div>
-	<div class="platforms mt-12 min-h-96 w-full">
-		<div class="flex flex-wrap justify-evenly gap-10 px-8">
+	<div class="platforms mt-12 min-h-96 md:px-24 w-full">
+		<div class="flex flex-wrap justify-evenly gap-5">
 			<Platform
 				platform="Windows"
 				icon="uil:microsoft"
@@ -34,11 +34,6 @@
 				icon="uil:linux"
 				info="x64, Debian, Fedora"
 				downloads={data.downloads?.linux} />
-			<Platform
-				platform="MacOS"
-				icon="uil:apple"
-				info="x64, macOS 10.15+"
-				downloads={data.downloads?.macos} />
 		</div>
 		<p class="mb-8 mt-12 px-4 text-center text-lg text-[#bbbbbb]">
 			Need help? Check out the <a href="/docs/installation" class="text-[#d8a4ff] hover:underline"

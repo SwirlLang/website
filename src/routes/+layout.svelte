@@ -23,6 +23,18 @@
 		navbar.classList.toggle('open');
 		dropdownBtn.classList.toggle('open');
 	}
+
+// 1. Close the navbar when a link is clicked (for better UX on mobile)
+// 2. Add keyboard accessibility (e.g., close navbar on Escape key)
+// 3. Animate the dropdown button when toggling
+// 4. Close the navbar when clicking outside of it
+// 5. Remember the navbar state (open/closed) across page navigations
+// 6. Add ARIA attributes for better accessibility
+// 7. Implement a smooth scroll to top when a link is clicked
+// 8. Add a backdrop overlay when the navbar is open on mobile
+// 9. Implement a sticky navbar that hides on scroll down and shows on scroll up
+// 10. Add a search bar in the navbar for quick navigation
+
 </script>
 
 <svelte:head>
