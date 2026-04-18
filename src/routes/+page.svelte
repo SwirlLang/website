@@ -8,7 +8,7 @@
 			Build <span>faster</span>
 		</h2>
 	</div>
-	<p>A modern, beginner-friendly language that combines power, performance, and simplicity.</p>
+	<p>An LLVM-based systems programming language for learning and experimentation.</p>
 	<div class="flex gap-4">
 		<a href="/download" class="btn download">Download</a>
 		<a href="/docs/installation" target="_blank" class="btn docs">Get started</a>
