@@ -15,7 +15,7 @@
 	</div>
 </main>
 
-<style lang="scss">
+<style>
 	:root {
 		--gradient-angle: 45deg;
 		--clr-1: #12008a;

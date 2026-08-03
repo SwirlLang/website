@@ -13,7 +13,7 @@
 	</div>
 </div>
 
-<style lang="scss">
+<style>
 	.card {
 		backdrop-filter: blur(10px);
 		box-shadow:

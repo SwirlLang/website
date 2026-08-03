@@ -2,7 +2,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import 'iconify-icon';
-	import '../app.scss';
+	import '../app.css';
 
 	let { children } = $props();
 
@@ -94,7 +94,7 @@
 	</a>
 </footer>
 
-<style lang="scss">
+<style>
 	header {
 		position: fixed;
 		top: 0;

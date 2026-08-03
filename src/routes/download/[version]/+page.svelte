@@ -42,7 +42,7 @@
 	</div>
 </main>
 
-<style lang="scss">
+<style>
 	main {
 		display: flex;
 		justify-content: center;
