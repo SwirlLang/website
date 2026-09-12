@@ -15,8 +15,8 @@ export const load: PageServerLoad = async ({ params, fetch }) => {
 	let version = /^(\d.\d.\d)(-(alpha|beta))?$/.exec(params.version) || [];
 
 	if (params.version === 'latest') {
-		version[0] = '0.0.6-alpha';
-		version[1] = '0.0.6';
+		version[0] = '0.0.7-alpha';
+		version[1] = '0.0.7';
 		version[2] = '-Alpha';
 	} else if (!version) error(400, 'Invalid version');
 
